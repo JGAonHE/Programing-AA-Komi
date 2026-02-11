@@ -21,3 +21,5 @@ product4_price = 35.00
 
 product5_name = "hanli figure"
 product5_price = 40.00
+
+print("STORE FILE LOADED")
