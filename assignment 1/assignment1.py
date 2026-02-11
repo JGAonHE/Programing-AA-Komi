@@ -4,6 +4,8 @@ Name:Komi
 Date: 2026-02-5
 """
 import storeinforatmion as store
+
+#Ask the user for their name, phone number and post code
 print("Welcome to Komi figure store!")
 print("Please tell us your name, phone number and post code")
 
@@ -11,6 +13,7 @@ customer_name = input("Name: ")
 customer_phone = input("Phone number: ")
 customer_postcode = input("Post code: ")
 
+#ask the user how many of each product they want to buy and validate the input
 print(f"First we have {store.product1_name} for ${store.product1_price}")
 qty1 = int(input(f"How many {store.product1_name} would you like to buy?(0-10) "))
 while qty1 < 0 or qty1 > 10:
@@ -66,7 +69,7 @@ print("\n" + "=" * 55)
 print("Receipt / Invoicei")
 print("=" * 55)
 
-#Customer and store information
+#Customer and store information line
 print("Store information")
 print(" Store: "+ store.store_name)
 print(" Address: "+ store.store_address)
@@ -77,9 +80,11 @@ print(" name: "+ customer_name)
 print(" phone number: "+ customer_phone) 
 print(" post code: "+ customer_postcode)
 
+#print the invoice with the product name, quantity, price and line total for each product, then print the subtotal, tax amount, total with tax, discount amount and final price. Format the output to look like a receipt.
 print("-" * 55)
 print(f"{'Product':<25}{'Qty':>5}{'Price':>10}{'Line Total':>15}")
 print("-" * 55)
+
 
 print(f"{store.product1_name:<25}{qty1:>5}{store.product1_price:>10.2f}{line_total1:>12.2f}")
 print(f"{store.product2_name:<25}{qty2:>5}{store.product2_price:>10.2f}{line_total2:>12.2f}")
